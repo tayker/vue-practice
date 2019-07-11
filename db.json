@@ -1,0 +1,43 @@
+{
+  "users": [
+    {
+      "name": "Petrodead",
+      "priority": "red",
+      "isInternal": true,
+      "preferences": [
+        "Read Products",
+        "Create Products"
+      ],
+      "department": "IT",
+      "description": "Some Petro",
+      "id": 6
+    },
+    {
+      "name": "Mikhailo",
+      "priority": "yellow",
+      "isInternal": true,
+      "preferences": [
+        "Create Products",
+        "Delete Products",
+        "Edit Products",
+        "Read Products"
+      ],
+      "department": "IT",
+      "description": "Some Mikhailo",
+      "id": 7
+    },
+    {
+      "name": "Serhii",
+      "priority": "red",
+      "isInternal": true,
+      "preferences": [
+        "Read Products",
+        "Create Products"
+      ],
+      "department": "RSC",
+      "description": "Some Serhii",
+      "id": 8
+    }
+  ],
+  "products": []
+}
