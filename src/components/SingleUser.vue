@@ -9,46 +9,43 @@
                     <span class="label">Employee status:</span>  {{ singleUser.isInternal === true ? 'Internal' : 'Outsource' }}
                 </div>
                 <div> <span class="label">Name:</span> {{ singleUser.name }}</div>
-                <!-- <div class="bottom clearfix"> -->
-                    <div class="descr"> <span class="label">Description:</span> {{ singleUser.description }}</div>
-                    <div class="priority">
-                        <span class="label">Priority:</span>  {{ singleUser.priority }}
+                <div class="descr"> <span class="label">Description:</span> {{ singleUser.description }}</div>
+                <div class="priority">
+                    <span class="label">Priority:</span>  {{ singleUser.priority }}
+                </div>
+                <div class="preferences">
+                    <div class="label title">
+                        Preferences:
                     </div>
-                    <div class="preferences">
-                        <div class="label title">
-                            Preferences:
-                        </div>
-                        <el-tag
-                            v-for="(preference, index) in singleUser.preferences" 
-                            :key="index"
-                            effect="dark"
-                            :type="computedPreferences(preference.split(' ')[0])"
-                            class="tag"
-                        >
-                            {{ preference.split(' ')[0] }}
-                        </el-tag>
-                    </div>
-                    <div class="department">
-                        <span class="label">Department:</span> {{ singleUser.department }}
-                    </div>
-                    <div>
-                        <el-button 
-                            type="warning" 
-                            class="button"
-                            @click="$router.push({path: `/user/edit/${singleUser.id}`})"
-                        >
-                            Edit
-                        </el-button>
-                        <el-button 
-                            type="danger" 
-                            class="button"
-                            @click="handleDelete()"
-                        >
-                            Delete
-                        </el-button>
-                    </div>
-                    
-                <!-- </div> -->
+                    <el-tag
+                        v-for="(preference, index) in singleUser.preferences" 
+                        :key="index"
+                        effect="dark"
+                        :type="computedPreferences(preference.split(' ')[0])"
+                        class="tag"
+                    >
+                        {{ preference.split(' ')[0] }}
+                    </el-tag>
+                </div>
+                <div class="department">
+                    <span class="label">Department:</span> {{ singleUser.department }}
+                </div>
+                <div>
+                    <el-button 
+                        type="warning" 
+                        class="button"
+                        @click="$router.push({path: `/user/edit/${singleUser.id}`})"
+                    >
+                        Edit
+                    </el-button>
+                    <el-button 
+                        type="danger" 
+                        class="button"
+                        @click="handleDelete()"
+                    >
+                        Delete
+                    </el-button>
+                </div>
             </div>
         </el-card>
     </div>
